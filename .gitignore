@@ -298,6 +298,10 @@ typings/
 
 
 
+
+
+#REACT JS IGNORE
+
 .DS_STORE
 node_modules
 scripts/flow/*/.flowconfig
