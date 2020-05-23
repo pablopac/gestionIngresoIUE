@@ -1,7 +1,7 @@
 pipeline {
    agent any
     environment {
-        gitURL = 'https://perezjuang:86100252807aA*@github.com/pablopac/gestionIngresoIUE.git'
+        gitURL = 'https://user:password@github.com/pablopac/gestionIngresoIUE.git'
         branchDEV = 'dev'
         branchQA= 'qa'
         branchPRD = 'master'
