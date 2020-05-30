@@ -16,7 +16,7 @@ public class Associated implements Serializable  {
 	@Id
 	@GeneratedValue(  strategy= GenerationType.AUTO,   generator="native")
 	@GenericGenerator( name = "native",  strategy = "native"  )
-    private Long idAssociated;
+    private Integer idAssociated;
     private String associated_id;
     private String nameAssociated;
 
@@ -24,18 +24,18 @@ public class Associated implements Serializable  {
    public Associated() {
    }
 
-    public Associated(Long id, String associated_id, String name) {
+    public Associated(Integer id, String associated_id, String name) {
  	   super();
     	this.idAssociated = id;
     	this.associated_id = associated_id;
     	this.nameAssociated = name;
     }
 
-	public Long getIdAssociated() {
+	public Integer getIdAssociated() {
 		return idAssociated;
 	}
 
-	public void setIdAssociated(Long idAssociated) {
+	public void setIdAssociated(Integer idAssociated) {
 		this.idAssociated = idAssociated;
 	}
 
