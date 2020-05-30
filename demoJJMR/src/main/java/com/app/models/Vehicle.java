@@ -1,4 +1,4 @@
-package com.iue.entity;
+package com.app.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,36 +20,36 @@ public class Vehicle {
 	@Column(name = "id")
 	private Long id;
 	@Column(name = "tipo")
-	private String tipo;
+	private String vehicle_id;
 	@Column(name = "licencia")
-	private String license;
+	private String license_id;
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String gettipo() {
-		return tipo;
+	public String getVehicle_id() {
+		return vehicle_id;
 	}
-	public void settipo(String tipo) {
-		this.tipo = tipo;
+	public void setVehicle_id(String vehicle_id) {
+		this.vehicle_id = vehicle_id;
 	}
-	public String getlicense() {
-		return license;
+	public String getLicense_id() {
+		return license_id;
 	}
-	public void setlicense(String license) {
-		this.license = license;
+	public void setLicense_id(String license_id) {
+		this.license_id = license_id;
 	}
 	@Override
 	public String toString() {
-		return "Vehicle [id=" + id + ", tipo=" + tipo + ", license=" + license + "]";
+		return "Vehicle [id=" + id + ", vehicle_id=" + vehicle_id + ", license_id=" + license_id + "]";
 	}
-	public Vehicle(Long id, String tipo, String license) {
+	public Vehicle(Long id, String vehicle_id, String license_id) {
 		super();
 		this.id = id;
-		this.tipo = tipo;
-		this.license = license;
+		this.vehicle_id = vehicle_id;
+		this.license_id = license_id;
 	}
 	public Vehicle() {
 		
