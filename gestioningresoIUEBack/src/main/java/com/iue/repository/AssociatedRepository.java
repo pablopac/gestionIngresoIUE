@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface AssociatedRepository extends CrudRepository<Associated, Integer> {
 
-    List<Associated> findByName(String name);	    
-    List<Associated> findByNameContaining(String name);
+    //List<Associated> findByName(String name);	    
+    //List<Associated> findByNameContaining(String name);
 	
 }	

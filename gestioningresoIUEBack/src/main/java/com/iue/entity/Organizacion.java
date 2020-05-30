@@ -9,15 +9,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
-@Table(name = "customer")
-public class Customer  implements Serializable {
-	private static final long serialVersionUID = 1L;
+@Table(name = "Organizacion")
+public class Organizacion  implements Serializable {
+private static final long serialVersionUID = 1L;
 	
 	
-	public Customer() {
+	public Organizacion() {
 	}
 
-	public Customer(int id,String name, String organization_id) {
+	public Organizacion (int id,String name, String organization_id) {
 		super();
 		this.id = id;
 		this.organization_id = organization_id;
@@ -36,7 +36,7 @@ public class Customer  implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ",name=" + name + " ,organization_id=" + organization_id + "]";
+		return "Organizacion [id=" + id + ",name=" + name + " ,organization_id=" + organization_id + "]";
 	}
 
 	public int getId() {
@@ -47,11 +47,11 @@ public class Customer  implements Serializable {
 		this.id = i;
 	}
 
-	public String getCustomer_id() {
+	public String getOrganizacion_id() {
 		return organization_id;
 	}
 
-	public void setCustomer_id(String organization_id) {
+	public void setOrganizacion_id(String organization_id) {
 		this.organization_id = organization_id;
 	}
 
@@ -62,4 +62,5 @@ public class Customer  implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 }
