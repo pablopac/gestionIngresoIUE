@@ -1,0 +1,6 @@
+projectKey=KEY_demoJJMR
+serverUrl=http://localhost:9000
+serverVersion=8.2.0.32929
+dashboardUrl=http://localhost:9000/dashboard?id=KEY_demoJJMR
+ceTaskId=AXGxy9OMXkCmj_lEKS7B
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXGxy9OMXkCmj_lEKS7B
