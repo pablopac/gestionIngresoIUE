@@ -1,4 +1,4 @@
-package com.iue.controller;
+package com.iue.controllers;
 
 
 import java.net.URI;
@@ -9,95 +9,58 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.iue.entity.*;
 import com.iue.repository.UsersysRepository;
 
 
-@Controller   
-@RequestMapping(path="/pos") 
+@RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+@RequestMapping(path = "/usersysAPI")
 public class UsersysController {
-	@Autowired 
-	private UsersysRepository UsersysRepository;
+	@Autowired
+	private UsersysRepository usersysRepository;
 
-	
-	@GetMapping(path="/getallusersys")
-	public @ResponseBody Iterable<Usersys> getAllUsersys() {
-		// This returns a JSON or XML with the users
-		return UsersysRepository.findAll();
-		
+	// ***Api Final Front
+	@PostMapping(path = "/addusersys", consumes = "application/json", produces = "application/json")
+	public Usersys addNewUsersysApi(@RequestBody Usersys usersys) {
+		// add resource
+		usersys = usersysRepository.save(usersys);
+		return usersys;
 	}
-	
-	
-	
-	@GetMapping(path="/addusersys") // Map ONLY GET Requests
-	public @ResponseBody String addNewUsersys (
-			@RequestParam String username,
-			@RequestParam String password) {
 
-		UsersysRepository.save(new 
-				Usersys(username, password));
-		
-		return "Saved";
-	}
-	
-	
-	@PostMapping(path="/updateusersys") 
-	public @ResponseBody ResponseEntity<String> updateNewUsersys (
-			@RequestBody Usersys usersys) {
-		UsersysRepository.save(usersys);
-		return new ResponseEntity<String>(HttpStatus.OK);
-	}
-	
-	@PostMapping(path="/removeusersys") 
-	public @ResponseBody ResponseEntity<String> removeUsersys (
-			@RequestBody Usersys usersys) {
-		UsersysRepository.delete(usersys);
-		return new ResponseEntity<String>(HttpStatus.OK);
-	}
-	
-	
-	/* Otras Formas  pero Bajo jUnit Testing*/
-	@GetMapping(path="/userssys", produces = "application/json")
-    public Userssys getUsersys() 
-    {
+	// ***Api Final Para FRONT
+	@GetMapping(path = "/usersysgetall", produces = "application/json")
+	public Userssys getAllUserssysApi() {
 		Userssys response = new Userssys();
 		ArrayList<Usersys> list = new ArrayList<>();
-		UsersysRepository.findAll().forEach(e -> list.add(e));
+		usersysRepository.findAll().forEach(e -> list.add(e));
 		response.setUsersysList(list);
-        return response;
-    }
-    
-    @PostMapping(path= "/userssys", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<Object> addUsersys(@RequestBody Usersys usersys) {       
-                
-        //add resource
-    	usersys = UsersysRepository.save(usersys);
-        
-        //Create resource location
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-                                    .path("/{id}")
-                                    .buildAndExpand(usersys.getId())
-                                    .toUri();
-        
-        //Send location in response
-        return ResponseEntity.created(location).build();
-    }
-	
-	
+		return response;
+	}
 
+	// ***Api Final Front
+	@PostMapping(path = "/updateusersys", consumes = "application/json", produces = "application/json")
+	public Usersys saveUsersysApi(@RequestBody Usersys usersys) {
+		// add resource
+		usersysRepository.save(usersys);
+		return usersys;
+	}
 
-	
+	// ***Api Final Front
+	@PostMapping(path = "/usersysremove", consumes = "application/json")
+	public @ResponseBody ResponseEntity<String> deleteUsersysApi(@RequestBody Usersys usersys) {
+		usersysRepository.deleteById(usersys.getId());
+		return new ResponseEntity<String>(HttpStatus.OK);
+	}
 
-	
-	
-	
-	
-	
 }
+
