@@ -32,6 +32,12 @@ const Header = () => (
           <Link to="/TypeId">TypeId</Link>
         </li>
         <li>
+          <a href='/Vehicle'>Link Vieja Escuela Vehiculo</a>
+        </li>
+        <li>
+          <Link to='/Vehicle'>Vehiculo</Link>
+        </li>
+        <li>
           <a href="/AppleCount">AppleCount</a>
         </li>
       </ul>
