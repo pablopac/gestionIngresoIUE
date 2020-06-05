@@ -1,5 +1,5 @@
 import React from "react";
-import './Header.scss';
+import "./Header.scss";
 import { Link } from "react-router-dom";
 //import "../assets/styles/components/Header.scss";
 //import logo from "../assets/static/logo.png";
@@ -32,10 +32,16 @@ const Header = () => (
           <Link to="/TypeId">TypeId</Link>
         </li>
         <li>
-          <a href='/Vehicle'>Link Vieja Escuela Vehiculo</a>
+          <a href="/Vehicle">Link Vieja Escuela Vehiculo</a>
         </li>
         <li>
-          <Link to='/Vehicle'>Vehiculo</Link>
+          <Link to="/Vehicle">Vehiculo</Link>
+        </li>
+        <li>
+          <Link to="/Area">Area</Link>
+        </li>
+        <li>
+          <Link to="/Facultad">Facultad</Link>
         </li>
         <li>
           <a href="/AppleCount">AppleCount</a>
