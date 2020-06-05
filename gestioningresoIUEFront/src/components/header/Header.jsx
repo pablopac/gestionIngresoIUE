@@ -32,6 +32,12 @@ const Header = () => (
           <Link to="/TypeId">TypeId</Link>
         </li>
         <li>
+          <Link to="/Area">Area</Link>
+        </li>
+        <li>
+          <Link to="/Facultad">Facultad</Link>
+        </li>
+        <li>
           <a href="/AppleCount">AppleCount</a>
         </li>
       </ul>
