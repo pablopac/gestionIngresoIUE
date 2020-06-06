@@ -1,4 +1,4 @@
-package com.app.models;
+package com.iue.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

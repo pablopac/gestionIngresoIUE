@@ -1,4 +1,4 @@
-package com.app.controllers;
+package com.iue.controller;
 
 
 import java.net.URI;
@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.app.models.*;
-import com.app.repository.AreaRepository;
+import com.iue.entity.*;
+import com.iue.repository.AreaRepository;
 
 
 @RestController

@@ -1,4 +1,4 @@
-package com.app.models;
+package com.iue.entity;
 
 import java.util.ArrayList;
 import java.util.List;

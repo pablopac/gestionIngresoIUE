@@ -1,4 +1,4 @@
-package com.iue.models;
+package com.iue.entity;
 
 import java.io.Serializable;
 

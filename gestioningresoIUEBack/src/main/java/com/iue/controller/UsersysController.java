@@ -1,4 +1,4 @@
-package com.iue.controllers;
+package com.iue.controller;
 
 
 import java.net.URI;

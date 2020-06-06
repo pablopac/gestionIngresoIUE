@@ -1,10 +1,10 @@
-package com.app.repository;
+package com.iue.repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.app.models.Facultad;
+import com.iue.entity.Facultad;
 
 
 	// This will be AUTO IMPLEMENTED by Spring into a Bean called CustomerRepository
