@@ -44,6 +44,9 @@ const Header = () => (
           <Link to="/Facultad">Facultad</Link>
         </li>
         <li>
+          <Link to="/Proveedor">Proveedor</Link>
+        </li>
+        <li>
           <a href="/AppleCount">AppleCount</a>
         </li>
       </ul>
