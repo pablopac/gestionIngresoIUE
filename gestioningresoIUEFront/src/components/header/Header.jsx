@@ -55,6 +55,12 @@ const Header = () => (
         <li>
           <Link to='/Organizacion'>Organizacion</Link>
         </li>
+	<li>
+	<a href='/Associated'>Link Vieja Escuela Empleado</a>
+	</li>
+	<li>
+	<Link to='/Associated'>Asociado</Link>
+	</li>
       </ul>
     </div>
   </header>

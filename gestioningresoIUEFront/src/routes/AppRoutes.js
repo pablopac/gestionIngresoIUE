@@ -13,6 +13,7 @@ import Proveedor from "../components/proveedor/Proveedor"
 import NotFound from "../components/notfound/NotFound";
 import AppleCount from "../components/Applecount";
 import Organizacion from '../components/organizacion/Organizacion';
+import Associated from '../components/associated/Associated';
 
 const AppRoutes = () => (
     <BrowserRouter>
@@ -27,6 +28,7 @@ const AppRoutes = () => (
                 <Route exact path="/Proveedor" component={Proveedor}/>
                 <Route exact path="/AppleCount" component={AppleCount}/>
 		<Route exact path='/Organizacion' component={Organizacion} />
+		<Route exact path='/Associated' component={Associated} />
                 <Route component={NotFound}/>
             </Switch>
         </Layout>
