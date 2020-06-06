@@ -12,6 +12,7 @@ import Facultad from "../components/facultad/Facultad";
 import Proveedor from "../components/proveedor/Proveedor"
 import NotFound from "../components/notfound/NotFound";
 import AppleCount from "../components/Applecount";
+import Organizacion from '../components/organizacion/Organizacion';
 
 const AppRoutes = () => (
     <BrowserRouter>
@@ -25,6 +26,7 @@ const AppRoutes = () => (
                 <Route exact path="/Facultad" component={Facultad}/>
                 <Route exact path="/Proveedor" component={Proveedor}/>
                 <Route exact path="/AppleCount" component={AppleCount}/>
+		<Route exact path='/Organizacion' component={Organizacion} />
                 <Route component={NotFound}/>
             </Switch>
         </Layout>

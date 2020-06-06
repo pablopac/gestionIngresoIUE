@@ -49,6 +49,12 @@ const Header = () => (
         <li>
           <a href="/AppleCount">AppleCount</a>
         </li>
+	<li>
+          <a href='/Organizacion'>Link Vieja Escuela Organizacion</a>
+        </li>
+        <li>
+          <Link to='/Organizacion'>Organizacion</Link>
+        </li>
       </ul>
     </div>
   </header>
