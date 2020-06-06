@@ -1,0 +1,6 @@
+projectKey=demofront
+serverUrl=http://localhost:9000
+serverVersion=8.2.0.32929
+dashboardUrl=http://localhost:9000/dashboard?id=demofront
+ceTaskId=AXH3JOqblONFmBOtp08Y
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXH3JOqblONFmBOtp08Y
